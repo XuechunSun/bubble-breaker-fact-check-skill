@@ -57,7 +57,11 @@ For each input card:
 4. Check each claim separately.
 5. Identify the weakest claim. The final confidence label should not be stronger than the weakest important claim.
 6. Look for common exaggerations, incorrect dates, wrong names, or context loss.
-7. Decide whether the card should be kept, rewritten, marked for review, or rejected.
+7. Decide whether the card should be kept, rewritten, researched more, or rejected.
+   - Use `publish_status: keep` when the current wording is publishable.
+   - Use `publish_status: rewrite` when the fact is usable but wording must be softened or clarified.
+   - Use `publish_status: research_more` when the claim might be usable but needs more sourcing before publishing.
+   - Use `publish_status: reject` when the claim is likely false, unsafe, or not worth salvaging.
 8. Rewrite the card in Chinese so it stays fun but does not overclaim.
 9. Provide source notes.
 10. Return the result in the required output format.
@@ -73,13 +77,19 @@ Return the answer in this structure:
 > {original_card}
 
 **Verdict**
-{keep / rewrite / review / reject}
+{keep / rewrite / research_more / reject}
 
 **Confidence**
 {confirmed / well_attested / anecdotal / disputed / likely_false}
 
 **Source quality**
 {high / medium / low}
+
+**Publish status**
+{keep / rewrite / research_more / reject}
+
+**Risk type**
+{array labels: anachronism, overclaim, date_uncertain, source_weak, causality_uncertain, translation_issue, too_absolute}
 
 ### Claim breakdown
 
@@ -91,13 +101,17 @@ Return the answer in this structure:
 
 {Explain the biggest accuracy risk in 1-3 sentences.}
 
-### Recommended Bubble Breaker version
+### Final card
 
 > {fun but accurate Chinese rewrite}
 
-### Optional short version
+### Xiaohongshu version
 
-> {one-sentence compact card version}
+> {shorter, more social-media-friendly version}
+
+### Admin note
+
+{Private note explaining accuracy risks and wording cautions.}
 
 ### Source notes
 
@@ -109,10 +123,15 @@ Return the answer in this structure:
 
 ```json
 {
+  "publish_status": "keep|rewrite|reject|research_more",
   "verification_status": "keep|rewrite|review|reject",
   "confidence_level": "confirmed|well_attested|anecdotal|disputed|likely_false",
   "source_quality": "high|medium|low",
   "needs_human_review": true,
+  "risk_type": ["anachronism|overclaim|date_uncertain|source_weak|causality_uncertain|translation_issue|too_absolute"],
+  "final_card": "...",
+  "xhs_version": "...",
+  "admin_note": "...",
   "recommended_wording": "...",
   "accuracy_note": "..."
 }

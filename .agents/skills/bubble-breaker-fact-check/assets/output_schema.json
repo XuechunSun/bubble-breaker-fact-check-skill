@@ -1,10 +1,14 @@
 {
   "card_id": "string optional",
   "original_card": "string",
+  "publish_status": "keep|rewrite|reject|research_more",
   "verification_status": "keep|rewrite|review|reject",
   "confidence_level": "confirmed|well_attested|anecdotal|disputed|likely_false",
   "source_quality": "high|medium|low",
   "needs_human_review": true,
+  "risk_type": [
+    "anachronism|overclaim|date_uncertain|source_weak|causality_uncertain|translation_issue|too_absolute"
+  ],
   "claim_breakdown": [
     {
       "claim": "string",
@@ -13,6 +17,9 @@
     }
   ],
   "main_issue": "string",
+  "final_card": "string",
+  "xhs_version": "string",
+  "admin_note": "string",
   "recommended_wording": "string",
   "optional_short_version": "string",
   "accuracy_note": "string",

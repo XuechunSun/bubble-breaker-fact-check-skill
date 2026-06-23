@@ -11,8 +11,21 @@ It can:
 - split a card into atomic fact claims,
 - judge source quality,
 - assign a `confidence_level`,
+- assign a publishing workflow status with `publish_status`,
+- flag accuracy risks with `risk_type`,
 - flag cards that need human review,
-- rewrite risky or exaggerated claims into more honest Chinese card copy.
+- rewrite risky or exaggerated claims into `final_card` and `xhs_version` copy,
+- add a private `admin_note` for accuracy risks and wording cautions.
+
+## v0.2 output fields
+
+The skill output includes these publishing workflow fields:
+
+- `publish_status`: `keep`, `rewrite`, `reject`, or `research_more`.
+- `risk_type`: an array of risk labels, such as `anachronism`, `overclaim`, `date_uncertain`, `source_weak`, `causality_uncertain`, `translation_issue`, or `too_absolute`.
+- `final_card`: the recommended user-facing Bubble Breaker card.
+- `xhs_version`: a shorter, more social-media-friendly version.
+- `admin_note`: a private note explaining accuracy risks and wording cautions.
 
 ## Repo structure
 

@@ -7,9 +7,11 @@
 ## Fact-check result
 
 * verification_status: rewrite
+* publish_status: rewrite
 * confidence_level: well_attested
 * source_quality: high
 * needs_human_review: false
+* risk_type: anachronism, translation_issue, too_absolute
 
 ## Claim breakdown
 
@@ -28,9 +30,21 @@
 
 > 古罗马洗衣工会用发酵尿液清洁衣物，因为其中的碱性成分能帮助去油污。更离谱的是，韦斯巴芗时期还出现过和公共尿液收集有关的税收，堪称“气味很重的财政创意”。
 
+## Final card
+
+> 古罗马洗衣工会用发酵尿液清洁衣物，因为其中的碱性成分能帮助去油污。更离谱的是，韦斯巴芗时期还出现过和公共尿液收集有关的税收，堪称“气味很重的财政创意”。
+
 ## Optional short version
 
 > 古罗马洗衣工会用发酵尿液去污，甚至还出现过和尿液有关的税：文明的味道，有时真的很复杂。
+
+## Xiaohongshu version
+
+> 古罗马洗衣竟然会用发酵尿液去污，还出现过和尿液有关的税。文明的味道，有时候真的很复杂。
+
+## Admin note
+
+事实方向可靠，但需要避免两个过度表达：不要把古罗马人的实践直接说成“利用尿液里的氨”，这是现代化学解释；也不要把税收直接说成“洗衣税”，更稳妥的是“与公共尿液收集/使用相关的税”。
 
 ## Source notes
 
@@ -42,10 +56,15 @@
 
 ```json
 {
+  "publish_status": "rewrite",
   "verification_status": "rewrite",
   "confidence_level": "well_attested",
   "source_quality": "high",
   "needs_human_review": false,
+  "risk_type": ["anachronism", "translation_issue", "too_absolute"],
+  "final_card": "古罗马洗衣工会用发酵尿液清洁衣物，因为其中的碱性成分能帮助去油污。更离谱的是，韦斯巴芗时期还出现过和公共尿液收集有关的税收，堪称“气味很重的财政创意”。",
+  "xhs_version": "古罗马洗衣竟然会用发酵尿液去污，还出现过和尿液有关的税。文明的味道，有时候真的很复杂。",
+  "admin_note": "事实方向可靠，但需要避免两个过度表达：不要把古罗马人的实践直接说成“利用尿液里的氨”，这是现代化学解释；也不要把税收直接说成“洗衣税”，更稳妥的是“与公共尿液收集/使用相关的税”。",
   "recommended_wording": "古罗马洗衣工会用发酵尿液清洁衣物，因为其中的碱性成分能帮助去油污。更离谱的是，韦斯巴芗时期还出现过和公共尿液收集有关的税收，堪称“气味很重的财政创意”。",
   "accuracy_note": "事实方向可靠，但建议避免直接说古罗马人“利用尿液里的氨”，因为这是现代化学解释；税收应表述为与公共尿液收集/使用相关，而不是直接说成明确的“洗衣税”。"
 }
