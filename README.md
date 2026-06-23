@@ -37,6 +37,7 @@ The skill output includes these publishing workflow fields:
 └── assets/
     └── output_schema.json
 examples/
+├── emu-war.md
 └── roman-urine-laundry-tax.md
 ```
 
@@ -45,6 +46,7 @@ examples/
 The `examples/` folder stores completed fact-check cases so they can be reused as review standards and regression examples.
 
 - [Roman Urine Laundry Tax](examples/roman-urine-laundry-tax.md)
+- [Emu War](examples/emu-war.md)
 
 ## Install locally
 
