@@ -161,6 +161,10 @@ When given a CSV, Markdown table, JSON array, or list of cards:
    - reject.
 4. For large batches, start with the riskiest cards: history, medicine, law, finance, psychology, science, and named-person quotes.
 
+## Example library
+
+For important or reusable fact-checks, save the final result to the repo-level `examples/` folder. Treat those examples as a review standard library for future Bubble Breaker card audits.
+
 ## Human review triggers
 
 Always mark `needs_human_review: true` for:

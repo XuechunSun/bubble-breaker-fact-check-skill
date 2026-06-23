@@ -23,7 +23,15 @@ It can:
 │   └── confidence_labels.md
 └── assets/
     └── output_schema.json
+examples/
+└── roman-urine-laundry-tax.md
 ```
+
+## Examples
+
+The `examples/` folder stores completed fact-check cases so they can be reused as review standards and regression examples.
+
+- [Roman Urine Laundry Tax](examples/roman-urine-laundry-tax.md)
 
 ## Install locally
 
