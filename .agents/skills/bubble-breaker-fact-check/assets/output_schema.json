@@ -1,0 +1,27 @@
+{
+  "card_id": "string optional",
+  "original_card": "string",
+  "verification_status": "keep|rewrite|review|reject",
+  "confidence_level": "confirmed|well_attested|anecdotal|disputed|likely_false",
+  "source_quality": "high|medium|low",
+  "needs_human_review": true,
+  "claim_breakdown": [
+    {
+      "claim": "string",
+      "assessment": "supported|partially supported|unsupported|unclear",
+      "notes": "string"
+    }
+  ],
+  "main_issue": "string",
+  "recommended_wording": "string",
+  "optional_short_version": "string",
+  "accuracy_note": "string",
+  "sources": [
+    {
+      "name": "string",
+      "url": "string optional",
+      "quality": "high|medium|low",
+      "note": "string"
+    }
+  ]
+}
